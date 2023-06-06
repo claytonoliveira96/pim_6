@@ -6,7 +6,13 @@ namespace Pim_6.BancodeDados
 {
     public static class ConectaBanco
     {
+        #region Propriedades
+
         private static MySqlConnection _conexao;
+
+        #endregion
+
+        #region Funções Públicas
 
         public static void Conectar()
         {
@@ -63,6 +69,6 @@ namespace Pim_6.BancodeDados
             }
         }
 
-
+        #endregion
     }
 }

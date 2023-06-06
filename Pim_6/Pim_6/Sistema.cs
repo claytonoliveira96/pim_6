@@ -101,7 +101,7 @@ namespace Pim_6
             return true;
         }
 
-        public void MenuInicial()
+        public void Iniciar()
         {
             int opcao = 0;
             bool prossegue = true;

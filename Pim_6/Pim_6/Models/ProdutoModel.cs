@@ -1,30 +1,26 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using Pim_6.BancodeDados;
+﻿using Pim_6.BancodeDados;
 
 namespace Pim_6.Models
 {
     internal class ProdutoModel
     {
-        #region
-        public int codigo { get; set; }
-        public string codigodebarras { get; set; }
-        public string nome { get; set; }
-        public string categoria { get; set; }
-        public string fabricante { get; set; }
-        public int quantidade  { get; set; }
-        public decimal valorproduto  { get; set; }
-        public string plataforma { get; set; }
-        public int prazogarantia { get; set; }
-        public DateTime datacadastro { get; set; }
+        #region Propriedades
+
+        public int codigo               { get; set; }
+        public string codigodebarras    { get; set; }
+        public string nome              { get; set; }
+        public string categoria         { get; set; }
+        public string fabricante        { get; set; }
+        public int quantidade           { get; set; }
+        public decimal valorproduto     { get; set; }
+        public string plataforma        { get; set; }
+        public int prazogarantia        { get; set; }
+        public DateTime datacadastro    { get; set; }
         public DateTime dataatualizacao { get; set; }
 
         #endregion
 
-        #region
+        #region Funções Públicas
         
         public void Inserir()
 

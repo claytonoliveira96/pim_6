@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using Pim_6.BancodeDados;
+﻿using Pim_6.BancodeDados;
 
 namespace Pim_6.Models
 {

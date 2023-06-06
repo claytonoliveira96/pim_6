@@ -1,15 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using Pim_6.BancodeDados;
+﻿using Pim_6.BancodeDados;
 
 namespace Pim_6.Models
 {
-    internal class UsuarioModel
+    public class UsuarioModel
     {
-        #region
+        #region Propriedades
 
         public int codigo               { get; set; } 
         public string nome              { get; set; }   
@@ -21,7 +16,8 @@ namespace Pim_6.Models
 
         #endregion
 
-        #region
+        #region Funções Públicas
+
         public void Inserir()
         {
             string sql = $"CALL Inserirusuarios('{nome}', '{login}', '{senha}')";
@@ -39,7 +35,7 @@ namespace Pim_6.Models
 
         public void  validalogin()
         {
-            string sql = $"CALL validalogin('{login}', '{senha}')";
+            string sql = $"CALL Validalogin('{login}', '{senha}')";
             var dataSet = ConectaBanco.ExecutarComando(sql);
             if (dataSet.Tables[0].Rows.Count > 0)
 
@@ -53,9 +49,12 @@ namespace Pim_6.Models
                     login           = dados["login"].ToString();
                     senha           = dados["senha"].ToString();
                     tipoacesso      = Convert.ToInt32(dados["tipo_acesso"]);
+
+                    break;
                 }
             }
         }
-         #endregion
+
+        #endregion
     }
 }
